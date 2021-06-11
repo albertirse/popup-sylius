@@ -3,7 +3,7 @@ workouse_popup_plugin_admin_popup:
     alias: workouse_popup_plugin.popup
     section: admin
     path: popup
-    templates: SyliusAdminBundle:Crud
+    templates: '@SyliusAdmin\\Crud'
     redirect: update
     grid: workouse_popup_plugin_admin_popup
     vars:

@@ -21,6 +21,6 @@ services:
   workouse_popup_plugin.block_event_listener.sylius.shop.layout.after_body:
     class: Sylius\Bundle\UiBundle\Block\BlockEventListener
     arguments:
-      - 'WorkousePopupPlugin:shop:popup.html.twig'
+      - 'WorkousePopupPlugin/shop/popup.html.twig'
     tags:
       - { name: kernel.event_listener, event: sonata.block.event.sylius.shop.layout.after_body, method: onBlockEvent }

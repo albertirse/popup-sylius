@@ -35,6 +35,19 @@ twig:
     form_themes:
         - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
 ```
+Import required config in your `config/services.yaml` file:
+
+```yaml
+# config/services.yaml
+
+services:
+    ...
+    
+    Workouse\PopupPlugin\Controller\PopupController:
+        public: true
+        tags: ['container.service_subscriber'] }
+```
+
 
 Import required config in your `config/packages/_sylius.yaml` file:
 
@@ -57,6 +70,13 @@ Import routing in your `config/routes.yaml` file:
 workouse_popup_plugin:
     resource: "@WorkousePopupPlugin/Resources/config/routing.yml"
 ```
+
+Override the templates:
+
+```yaml
+
+cp  vendor/workouse/popup-sylius/src/Resources/views/shop/popup.html.twig templates/WorkousePopupPlugin/shop/
+...
 
 Finish the installation by updating the database schema and installing assets:
 ```
