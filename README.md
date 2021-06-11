@@ -76,10 +76,12 @@ Override the templates:
 ```yaml
 
 cp  vendor/workouse/popup-sylius/src/Resources/views/shop/popup.html.twig templates/WorkousePopupPlugin/shop/
-...
+```
 
 Finish the installation by updating the database schema and installing assets:
-```
+
+```yaml
+
 $ bin/console doctrine:migrations:diff
 $ bin/console doctrine:migrations:migrate
 $ bin/console assets:install --symlink
